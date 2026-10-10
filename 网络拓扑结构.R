@@ -15,7 +15,6 @@ predicted_network <- graph_from_data_frame(RF, directed = TRUE)
 # 计算预测网络的平均聚类系数
 predicted_clustering <- transitivity(predicted_network, type = "average")
 cat("预测网络的聚类系数:", predicted_clustering, "\n")
-#预测网络的聚类系数:  0.6039737
 # 2. 随机化并计算聚类系数
 set.seed(123)  # 设置随机种子保证结果可复现
 random_clustering_list <- numeric(100)  # 用于存储随机网络的聚类系数
@@ -116,7 +115,6 @@ cat("p 值:", p_value, "\n")
 # 计算预测网络的平均路径长度
 predicted_avg_path_length_RF <- average.path.length(predicted_network, directed = TRUE)
 cat("预测网络的平均路径长度:", predicted_avg_path_length_RF, "\n")
-#预测网络的平均路径长度: 2.600353
 # 设置随机种子保证结果可复现
 set.seed(123)
 # 用于存储随机网络的平均路径长度
@@ -153,10 +151,7 @@ predicted_density <- edge_density(predicted_network)  # 网络密度
 cat("预测网络的特性:\n")
 cat("聚类系数:", predicted_clustering, "\n")
 cat("平均路径长度:", predicted_avg_path_length, "\n")
-cat("网络密度:", predicted_density, "\n\n")
-#聚类系数: 0.6039737
-#平均路径长度: 2.600353
-#网络密度: 0.0007607521 
+cat("网络密度:", predicted_density, "\n\n") 
 # 设置随机种子保证结果可复现
 set.seed(123)
 
@@ -228,9 +223,6 @@ cat("预测网络的特性:\n")
 cat("聚类系数:", predicted_clustering_ET, "\n")
 cat("平均路径长度:", predicted_avg_path_length_ET, "\n")
 cat("网络密度:", predicted_density_ET, "\n\n")
-#聚类系数: 0.5775238
-#平均路径长度: 2.686938 
-#网络密度:  0.0006906535 
 # 设置随机种子保证结果可复现
 set.seed(123)
 
@@ -288,9 +280,6 @@ cat("预测网络的特性:\n")
 cat("聚类系数:", predicted_clustering_GRNBoost, "\n")
 cat("平均路径长度:", predicted_avg_path_length_GRNBoost, "\n")
 cat("网络密度:", predicted_density_GRNBoost, "\n\n")
-#聚类系数: 0.9380575 
-#平均路径长度: 1.355252 
-#网络密度:  0.007695095  
 # 设置随机种子保证结果可复现
 set.seed(123)
 
